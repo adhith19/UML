@@ -1,0 +1,40 @@
+@startuml
+
+class Customer {
+    customerId
+    name
+    login()
+    placeOrder()
+}
+
+class Product {
+    productId
+    name
+    price
+    displayProduct()
+}
+
+class Cart {
+    cartId
+    addProduct()
+    removeProduct()
+}
+
+class Order {
+    orderId
+    orderDate
+    confirmOrder()
+}
+
+class Payment {
+    paymentId
+    amount
+    makePayment()
+}
+
+Customer --> Cart : uses
+Cart --> Product : contains
+Customer --> Order : places
+Order --> Payment : has
+
+@enduml
