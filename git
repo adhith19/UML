@@ -1,0 +1,15 @@
+git init
+git config --global user.name "Student Name"
+git config --global user.email "student@example.com"
+git status
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin <YOUR_GITHUB_REPOSITORY_URL>
+git push -u origin main
+git checkout -b feature/student-page
+git add .
+git commit -m "Added student page"
+git push -u origin feature/student-page
+git checkout main
+git pull origin main
