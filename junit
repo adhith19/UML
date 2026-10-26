@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class Calculator {
+public int add(int a, int b) {
+return a + b;
+}
+public int subtract(int a, int b) {
+return a - b;
+}
+public int multiply(int a, int b) {
+return a * b;
+} public double divide(int a, int b) {
+return (double) a / b;
+}
+public int square(int a) {
+return a * a;
+}
+public boolean isEven(int a) {
+return a % 2 == 0;
+}
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+Calculator calc = new Calculator();
+System.out.print("Enter first number: ");
+int a = sc.nextInt();
+System.out.print("Enter second number: ");
+int b = sc.nextInt();
+System.out.println("Addition = " + calc.add(a, b));
+System.out.println("Subtraction = " + calc.subtract(a, b));
+System.out.println("Multiplication = " + calc.multiply(a, b));
+if (b != 0) {
+System.out.println("Division = " + calc.divide(a, b));
+} else {
+System.out.println("Division = Cannot divide by zero");
+}
+System.out.println("Square of first number = " + calc.square(a));
+System.out.println("Is first number even? = " + calc.isEven(a));
+sc.close();
+}
+}
